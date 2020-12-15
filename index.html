@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-        <link rel="stylesheet" href="style.css">
-        <title>Slider</title>
-    </head>
-    <body>
-      <div id="app">
-        <div class="container">
-            <div class="slider-wrapper">
-                <div class="prev" @click="prev">
-                    <i class="fas fa-angle-left"></i>
-                </div>
-                <div class="images">
-                    <img class="active" :src="immagini[contatoreImmagini]" alt="">
-                </div>
-                <div class="next" @click="next">
-                    <i class="fas fa-angle-right"></i>
-                </div>
-                <div class="nav">
-                  <!-- ()? sarebbe if mostrami active, quindi viene aggiunta la classe active.
-                  : '' sarebbe else non mostrarmi nulla, quindi non viene aggiunta la classe active. -->
-                  <i @click="" :class="(index === contatoreImmagini) ? 'active' : '' " class="fas fa-circle" v-for="(immaginiElemento, index) in immagini"></i>
-                </div>
-            </div>
+  <head>
+      <meta charset="utf-8">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+      <link rel="stylesheet" href="style.css">
+      <title>Slider</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <div class="slider-wrapper">
+          <div class="prev" @click="prev">
+            <i class="fas fa-angle-left"></i>
+          </div>
+          <div class="images">
+            <img class="active" :src="immagini[contatoreImmagini]" alt="">
+          </div>
+          <div class="next" @click="next">
+            <i class="fas fa-angle-right"></i>
+          </div>
+          <div class="nav">
+            <!-- ()? sarebbe if mostrami active, quindi viene aggiunta la classe active.
+            : '' sarebbe else non mostrarmi nulla, quindi non viene aggiunta la classe active. -->
+            <i @click="" :class="(index === contatoreImmagini) ? 'active' : '' " class="fas fa-circle" v-for="(immaginiElemento, index) in immagini"></i>
+          </div>
         </div>
       </div>
+    </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-        <script src="main.js"></script>
-    </body>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+      <script src="main.js"></script>
+  </body>
 </html>
