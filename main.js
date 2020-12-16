@@ -19,6 +19,14 @@ let app = new Vue ({
   },
   created: function () {
     var intervallo = setInterval (this.next, 3000);
+
+    document.addEventListener("keyup", e =>{
+      if(e.key === "ArrowRight") {
+        this.next();
+      } else if (e.key ==="ArrowLeft") {
+        this.prev();
+      }
+    })
   },
   methods: {
     next() {
@@ -37,5 +45,5 @@ let app = new Vue ({
     circleClick (index){
       this.contatoreImmagini = index;
     }
-  }
+  },
 });

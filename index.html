@@ -15,15 +15,16 @@
             <i class="fas fa-angle-left"></i>
           </div>
           <div class="images">
-            <img class="active" :src="immagini[contatoreImmagini]" alt="">
+            <img class="active" v-bind:src="immagini[contatoreImmagini]" alt="">
           </div>
           <div class="next" @click="next">
+            <div @keyup="next"></div>
             <i class="fas fa-angle-right"></i>
           </div>
           <div class="nav">
             <!-- ()? sarebbe if mostrami active, quindi viene aggiunta la classe active.
             : '' sarebbe else non mostrarmi nulla, quindi non viene aggiunta la classe active. -->
-            <i @click="circleClick(index)" :class="(index === contatoreImmagini) ? 'active' : '' " class="fas fa-circle" v-for="(immaginiElemento, index) in immagini"></i>
+            <i @click="circleClick(index)" v-bind:class="(index === contatoreImmagini) ? 'active' : '' " class="fas fa-circle" v-for="(immaginiElemento, index) in immagini"></i>
           </div>
         </div>
       </div>
