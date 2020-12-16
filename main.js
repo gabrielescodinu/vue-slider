@@ -34,5 +34,8 @@ let app = new Vue ({
         this.contatoreImmagini = this.immagini.length - 1;
       }
     },
+    circleClick (index){
+      this.contatoreImmagini = index;
+    }
   }
 });

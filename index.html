@@ -23,7 +23,7 @@
           <div class="nav">
             <!-- ()? sarebbe if mostrami active, quindi viene aggiunta la classe active.
             : '' sarebbe else non mostrarmi nulla, quindi non viene aggiunta la classe active. -->
-            <i @click="" :class="(index === contatoreImmagini) ? 'active' : '' " class="fas fa-circle" v-for="(immaginiElemento, index) in immagini"></i>
+            <i @click="circleClick(index)" :class="(index === contatoreImmagini) ? 'active' : '' " class="fas fa-circle" v-for="(immaginiElemento, index) in immagini"></i>
           </div>
         </div>
       </div>
